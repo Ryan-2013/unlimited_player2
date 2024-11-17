@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>循环播放音视频文件</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 class="h1_title">选择音频或视频文件进行循环播放</h1>
+    
+    <div class="fileInput_container">
+        <label for="fileInput" class="fileInput_button">选择音频/视频文件</label>
+        <input type="file" id="fileInput" multiple accept="audio/*,video/*" class="fileInput_class">
+    </div>
+    
+    <div class="file_name_title">
+        <h1>目前播放檔案: 沒有選取檔案</h1>
+    </div>
+    
+    <div>
+        <ul class="file_name_list">
+            <li>播放檔案列表: 未選取檔案</li>
+        </ul>
+    </div>
+
+
+    <div id="playerContainer">
+        <video id="videoPlayer" controls style="display: none;"></video>
+        <audio id="audioPlayer" controls style="display: none;"></audio>
+        <div id="progressContainer" style="display: none;">
+            <input type="range" id="progressBar" min="0" max="1" step="0.01" value="0">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
